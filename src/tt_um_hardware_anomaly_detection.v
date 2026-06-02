@@ -64,7 +64,7 @@ module tt_um_hardware_anomaly_detection (
 
             // Default done pulse low
             done <= 1'b0;
-            uio_out[0] <= 1'b0;
+            uio_out[0] <= 1'b1;
 
             //------------------------------------------------
             // SERIAL PACKET RECEIVER
@@ -73,7 +73,7 @@ module tt_um_hardware_anomaly_detection (
 
                 packet <= {packet[62:0], serial_bit};
 
-                if (bit_count == 6'd63) begin
+                if (bit_count == 6'd62) begin
 
                     bit_count <= 6'd0;
 
