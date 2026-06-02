@@ -18,7 +18,7 @@ async def stream_packet(dut, payload):
 
     dut.ui_in.value = 0
 
-    await ClockCycles(dut.clk, 2)
+    await ClockCycles(dut.clk, 10)
 
 
 async def wait_done(dut):
